@@ -9,5 +9,5 @@
  * Implements hook_install().
  */
 function beautytips_node_install() {
-  variable_set('beautytips_always_add', TRUE);
+  config_set('beautytips.settings','beautytips_always_add', TRUE);
 }

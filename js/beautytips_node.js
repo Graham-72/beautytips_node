@@ -1,13 +1,13 @@
 (function($) {
-  Drupal.behaviors.beautytips_node = {
+  Backdrop.behaviors.beautytips_node = {
     attach: function(context, settings) {
-      // Fix for drupal attach behaviors in case the plugin is not attached.
+      // Fix for backdrop attach behaviors in case the plugin is not attached.
       if (typeof(jQuery.bt) == 'undefined' && jQuery.bt == null) {
         return;
       }
-      var beautytips = Drupal.settings.beautytips;
-      var styles = Drupal.settings.beautytipStyles;
-      var beautytipsnode = Drupal.settings.beautyTipsNode;
+      var beautytips = Backdrop.settings.beautytips;
+      var styles = Backdrop.settings.beautytipStyles;
+      var beautytipsnode = Backdrop.settings.beautyTipsNode;
       var defaultStyle = beautytipsnode.defaultStyle;
       var defaultStyleSettings = styles[defaultStyle];
 
