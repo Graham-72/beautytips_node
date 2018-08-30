@@ -1,6 +1,7 @@
 name = BeautyTips Node
 description = A simple utility module to display nodes in the beautytip pop up using Ajax.
 backdrop = 1.x
+type = module
 package = User interface
 dependencies[] = beautytips
 configure = admin/config/user-interface/beautytips/node-settings
