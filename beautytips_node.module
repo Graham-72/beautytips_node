@@ -22,7 +22,7 @@ function beautytips_node_init() {
  * Implements hook_menu()
  */
 function beautytips_node_menu() {
-  $items['admin/config/user-interface/beautytips/node-settings'] = array(
+  $items['admin/config/content/beautytips/node-settings'] = array(
     'title' => 'BeautyTips node settings',
     'description' => 'Settings for the BeautyTips node submodule',
     'page callback' => 'backdrop_get_form',

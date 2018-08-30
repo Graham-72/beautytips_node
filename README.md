@@ -24,7 +24,7 @@ Install this module using the official Backdrop CMS instructions at
 ## Configuration
 
 Navigate to module settings at 
-admin/config/user-interface/beautytips/node-settings.
+admin/config/content/beautytips/node-settings.
 
 
 ## How to use
