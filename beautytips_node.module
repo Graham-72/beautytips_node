@@ -102,6 +102,14 @@ function beautytips_node_admin_settings() {
   foreach ($view_modes as $machine_name => $view_mode) {
     $options[$machine_name] = $view_mode['label'];
   }
+  $form['help1'] = array(
+    '#type' => 'markup',
+    '#markup' => t('When you create your links manually, you will need to add the class "beautytips-node" to the link. That is the only class required and the module will handle the BeautyTip loading internally. Your link could look like any of these:'),
+  );
+  $form['help2'] = array(
+    '#type' => 'markup',
+    '#markup' => t('<div><code>Example code goes here.</code></div>'),
+  );
   $form['beautytips_node_view_mode'] = array(
     '#type' => 'select',
     '#title' => t('BeautyTip view mode'),
