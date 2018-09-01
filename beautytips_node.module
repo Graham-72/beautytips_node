@@ -108,7 +108,10 @@ function beautytips_node_admin_settings() {
   );
   $form['help2'] = array(
     '#type' => 'markup',
-    '#markup' => t('<div><code>Example code goes here.</code></div>'),
+    '#markup' => '<div style="font-size:80%;"><code><br />' . htmlspecialchars('<a class="beautytips-node" href="my-first-node">My Example</a>') . "<br />
+// if you are using views, you can set the row class to 'beautytips-node' under the 'Format settings'<br />" .  htmlspecialchars('
+<div class="beautytips-node">') . '<br />&nbsp;&nbsp;' . htmlspecialchars('<a href="my-first-node">My Example</a>') . '<br />' .
+  htmlspecialchars('</div>') . '</code></div>',
   );
   $form['beautytips_node_view_mode'] = array(
     '#type' => 'select',
