@@ -8,7 +8,7 @@
  * Implements hook_init()
  */
 function beautytips_node_init() {
-  // add Js settings
+  // add JS settings.
   $settings = array(
     'viewMode' => config_get('beautytips_node.settings','beautytips_node_view_mode'),
     'defaultStyle' => config_get('beautytips_node.settings','beautytips_node_viewmode_default_style'),
@@ -72,7 +72,8 @@ function beautytips_node_beautytips_node_output($path) {
   // If we have a node, lets display it
   if ($node) {
     // @TODO : Use a settings page
-    print backdrop_render(node_view($node, 'beautytips_node'));
+    $node_view = node_view($node, 'full');
+    print backdrop_render($node_view);
   }
   else {
     // This isn't a node or the node failed to load.
@@ -104,14 +105,11 @@ function beautytips_node_admin_settings() {
   }
   $form['help1'] = array(
     '#type' => 'markup',
-    '#markup' => t('When you create your links manually, you will need to add the class "beautytips-node" to the link. That is the only class required and the module will handle the BeautyTip loading internally. Your link could look like any of these:'),
+    '#markup' => t('When you create your links manually, you will need to add the class "beautytips-node" to the link. That is the only class required and the module will handle the BeautyTip loading internally. Your link could look like this:'),
   );
   $form['help2'] = array(
     '#type' => 'markup',
-    '#markup' => '<div style="font-size:80%;"><code><br />' . htmlspecialchars('<a class="beautytips-node" href="my-first-node">My Example</a>') . "<br />
-// if you are using views, you can set the row class to 'beautytips-node' under the 'Format settings'<br />" .  htmlspecialchars('
-<div class="beautytips-node">') . '<br />&nbsp;&nbsp;' . htmlspecialchars('<a href="my-first-node">My Example</a>') . '<br />' .
-  htmlspecialchars('</div>') . '</code></div>',
+    '#markup' => '<div style="font-size:90%;"><code>' . htmlspecialchars('<a class="beautytips-node" href="my-tip-node">My Example</a>') . '</code></div>',
   );
   $form['beautytips_node_view_mode'] = array(
     '#type' => 'select',
@@ -178,6 +176,3 @@ function beautytips_node_config_info()
   );
   return $prefixes;
 }
-
-
-

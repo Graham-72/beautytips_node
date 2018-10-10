@@ -4,5 +4,7 @@ backdrop = 1.x
 type = module
 package = User interface
 dependencies[] = beautytips
+dependencies[] = beautytips_manager
+dependencies[] = beautytips_ui
 configure = admin/config/content/beautytips/node-settings
 scripts[] = js/beautytips_node.js
